@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<opencv_storage>
+<cam_distortion_vect type_id="opencv-matrix">
+  <rows>5</rows>
+  <cols>1</cols>
+  <dt>d</dt>
+  <data>
+    -2.1534340409373331e-001 2.5944887902115993e-001 0. 0. 0.</data></cam_distortion_vect>
+</opencv_storage>

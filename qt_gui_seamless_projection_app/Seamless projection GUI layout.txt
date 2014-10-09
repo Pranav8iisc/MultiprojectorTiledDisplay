@@ -1,0 +1,57 @@
+/// GUI for multiprojector alignment application:
+
+
+
+***************************************************** GUI Form starts ************************************************************
+
+Select projector IDs:(checkbox control)
+o 7  o 8  o 9
+o 4  o 5  o 6
+o 1  o 2  o 3
+
+
+Load already existing corner detection dataset?
+o Yes
+o No
+
+#Following should be active only if 'No' is selected in just previous question
+							         ---------------			   -------------- 
+Camera view (Resizable){Live feed}              Camera aperture | slider control|    Camera shutter speed |slider control|
+----------------------------------------------			 ---------------		           -------------- 
+|                                            |
+|                                            |
+|                                            |
+|                                            |
+|					     |	
+----------------------------------------------
+
+     --------        ------------------------------------------
+    | Capture|      | Log of internel processing ...          |
+     --------	    | ***** 				      |
+                    | *****                                   |
+ 		     -----------------------------------------			
+
+
+
+#Following controls should be active only when geometric registration processing is over
+
+Blending
+o Yes
+o No
+
+#If response to previous query is Yes, then make following control 'active'
+
+Choose type of blending function
+o Blackout
+o Averaging 
+o Distance transform
+ 
+  -------------------
+ | Compute Alpha maps|                 -----------------------------------------
+  -------------------                 | Log of internel processing ...          |
+     		                      | ***** 				        |
+                                      | *****                                   |
+ 		                       -----------------------------------------	
+
+********************************************************* GUI form ends ************************************************************
+ 

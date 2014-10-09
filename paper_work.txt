@@ -1,0 +1,2 @@
+#1. Blending algorithm
+#2. Geometric registration algorithm + issues regarding its accuracy

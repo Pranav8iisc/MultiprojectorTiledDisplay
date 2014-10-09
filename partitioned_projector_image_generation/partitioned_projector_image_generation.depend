@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1381127626 source:/home/pranav/Desktop/seamless_projection/partitioned_projector_image_generation/partitioned_projector_image_generator.cpp
+	<GL/gl.h>
+	<GL/glu.h>
+	<GL/glut.h>
+	<stdlib.h>
+	<stdio.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<GL/glut.h>
+	<stdlib.h>
+	<stdio.h>
+	"opencv/cv.h"
+	"opencv/highgui.h"
+

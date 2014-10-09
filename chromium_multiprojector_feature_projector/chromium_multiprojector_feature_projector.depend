@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1376379508 source:/home/pranav/Desktop/chromium_multiprojector_feature_projector/chromium_multiprojector_feature_projector.cpp
+	<GL/gl.h>
+	<GL/glu.h>
+	<GL/glut.h>
+	<stdlib.h>
+	<math.h>
+
