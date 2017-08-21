@@ -14,7 +14,7 @@ Predominantly, this code is an implementation of the multiprojector geometric al
 
 ### TODOs
 * GUI
-* User manual
+* User manual(for hackers, sl\_multiproj.cpp contains the core implmentation)
 * File(or, GUI)-based configurability 
 * Extension of the code for arbitrary planar multiprojector arrangements
 
