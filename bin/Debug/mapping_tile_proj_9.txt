@@ -1,9 +1,0 @@
-2 2
-/global/tile_specs/texture.txt.test
-/global/tile_specs/texture.txt.test
-/global/tile_specs/texture.txt.test
-/global/tile_specs/texture.txt.test
--1.000000	-1.000000	0.000000	0.000000
-1.000000	-1.000000	1.000000	0.000000
--1.000000	1.000000	0.000000	1.000000
-1.000000	1.000000	1.000000	1.000000
