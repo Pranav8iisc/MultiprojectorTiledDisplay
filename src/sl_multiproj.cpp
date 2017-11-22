@@ -1736,7 +1736,7 @@ void generate_default_chromium_configuration()
     return;
 }
 
-
+/*
 // nvidia mosaic configuration
 void configure_nvidia_mosaic()
 {
@@ -1789,7 +1789,7 @@ void configure_nvidia_warp()
 	XNVCTRLSetScanoutWarping(xDpy, screenId, nvDpyId, warpDataType, warpData); 
 	return;
 }
-
+*/
 
 
 
@@ -2063,10 +2063,10 @@ int main()
 
         generate_chromium_configuration(); // optional
 
-	configure_nvidia_mosaic();	
+/*	configure_nvidia_mosaic();	
 
 	configure_nvidia_warp();
-
+*/
     return 0;
 
 }
