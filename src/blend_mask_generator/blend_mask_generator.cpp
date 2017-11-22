@@ -157,6 +157,12 @@ float blending_function(unsigned int method, unsigned int proj_id,unsigned proj_
     return blend_value;
 }
 
+// TODO
+void configure_nvidia_blend()
+{
+}
+
+
 
 int main()
 {
@@ -935,8 +941,8 @@ int main()
     }
 
 
-
-
+    // TODO: add function for NVIDIA Blend mask binding	
+    configure_nvidia_blend();
 
 
     return 0;

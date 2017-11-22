@@ -127,10 +127,6 @@ void callback_get_point(int event,int x,int y,int flags,void* param)
             corners_detected=true;
     }
 
-
-
-
-
     return;
 }
 
@@ -144,13 +140,8 @@ void compute_c_s_homography()
     CvFileStorage*fs_camera_distotion_vect=cvOpenFileStorage("Camera_calibration/cam_distortion_vect.xml",0,CV_STORAGE_READ);
     cam_dist_vect=(CvMat*)cvReadByName(fs_camera_distotion_vect,0,"cam_distortion_vect");
 
-
-
     cvNamedWindow("Click on 4 points:",0);
     cvSetMouseCallback("Click on 4 points:",callback_get_point,NULL);
-
-
-
 
     printf("\nCapture wall position?");
     fflush(stdout);
@@ -191,7 +182,6 @@ void compute_c_s_homography()
         if(corners_detected==true)
             break;
     }
-
 
 
     //Lets copy the image points.
@@ -1318,9 +1308,6 @@ void compute_global_width_and_height(float * max_width,float * max_height)
     return;
 }
 
-
-
-
 void modify_local_bounding_boxes()
 {
 
@@ -1750,6 +1737,58 @@ void generate_default_chromium_configuration()
 }
 
 
+// nvidia mosaic configuration
+void configure_nvidia_mosaic()
+{
+	// query if SLI MOSAIC mode is enabled.	
+	XNVCTRLQueryAttribute(dpy, screenID, display_mask, NV_CTRL_SLI_MOSAIC_MODE_AVAILABLE, return_val);
+	if (return_value == NV_CTRL_SLI_MOSAIC_MODE_AVAILABLE_TRUE)
+	{
+		// initialize chromium_config in X metamode string format
+		char** chromium_config;
+		
+		// initialize chromim configuration 
+		for (size_t projID = 0; projID < numberOfProjector; projID++)
+		{
+			for (size_t configID = 0; configID < 4; configID++)
+				chromium_config += chorimum_tile[proj_id][configID];
+		}
+		// TODO: manual(if above does not work) 
+		chromium_config = "GPU-0.DFP -0: proj_imagewidth X proj_imageheight +offset_X +offset_Y, GPU-0.DFP-1: proj_imagewidth X proj_imageheight +offset_X +offset_Y, GPU-0.DFP-2:proj_imagewidth X proj_imageheight +offset_X +offset_Y: GPU-1.DFP-0: proj_imagewidth X proj_imageheight +offset_X +offset_Y, GPU-1.DFP-1: proj_imagewidth X proj_imageheight +offset_X +offset_Y, GPU-1.DFP-2:proj_imagewidth X proj_imageheight +offset_X +offset_Y: GPU-2.DFP-0:proj_imagewidth X proj_imageheight +offset_X +offset_Y: GPU-2.DFP-1:proj_imagewidth X proj_imageheight +offset_X +offset_Y, GPU-2.DFP-2: proj_imagewidth X proj_imageheight +offset_X +offset_Y";
+		// set tile configuration
+		XNVCTRLSetAttribute(dpy, screenID, display_mask, NV_CTRL_STRING_ADD_METAMODE, chromium_config);
+
+		// test: query current metamodes
+		XNVCTRLGetAttribute(dpy, screenID, display_mask, NV_CTRL_STRING_CURRENT_METAMODE, return_value);
+		// set NVIDIAXINERAMA option to false
+		XNVCTRLSetAttribute(dpy, screenID, display_mask, NV_CTRL_XINERAMA, NV_CTRL_XINERAMA_OFF);
+	}	
+	return;
+}
+
+
+// passes the warp matrix to nvidia-xconfig using XNVCTrl API.
+void configure_nvidia_warp()
+{
+  for (size_t projID = 0; projID < maxNoOfProjectors; projID++) //  for all projectors
+  {
+  	xDpy = ;
+  	screenId = ;
+  	nvDpyId = ;
+  	warpDataType = ;
+	// 'warpMapSize' is the total number of warp vertex- tex vertex pairs
+	for (size_t i = 0; i < warpMapSize; i++) 			
+	{
+		warpData[i].pos.x = ;
+	        warpData[i].pos.y = ;
+		warpData[i].tex.x = ;
+		warpData[i].tex.y = ;
+		warpData[i].tex2.x = ;
+		warpData[i].tex2.y = ;
+  	}
+	XNVCTRLSetScanoutWarping(xDpy, screenId, nvDpyId, warpDataType, warpData); 
+	return;
+}
 
 
 
@@ -1998,8 +2037,6 @@ int main()
 
     }
 
-
-
 ///Just inverting the coordinate system to be inaccordance with OpenGL convention
     for(unsigned int n=starting_proj_ID; n<(starting_proj_ID+max_num_of_projectors); n++)
         if(active_projectors[n]==true) // iff projector 'n' is used
@@ -2020,16 +2057,18 @@ int main()
 
         compute_local_normalized_coordinates();
 
-        compute_chromium_scale_factor();
-
-        generate_chromium_configuration();
+        compute_chromium_scale_factor(); // may be used for the nvidia mosaic settings too
 
         create_tile_projector_mapping();
 
+        generate_chromium_configuration(); // optional
 
+	configure_nvidia_mosaic();	
 
-
+	configure_nvidia_warp();
 
     return 0;
 
 }
+
+
