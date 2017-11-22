@@ -13,12 +13,12 @@ Predominantly, this code is an implementation of the multiprojector geometric al
 * Qt(soon...)
 
 ### Build
-```mkdir build```
-```cd build```
-```cmake ../ ```
+```mkdir build```  
+```cd build```  
+```cmake ../ ```  
 ```make```
 
-### Documentation(*Note: Includes some local/hardcoded stuff at the moment*)
+### Documentation(**Not generic**)
 * [Running calibration](https://github.com/pranavkantgaur/MyDocs/blob/master/Multiprojector_instruction_manual/running_calibration.ogv)
 * [Applying calibration settings](https://github.com/pranavkantgaur/MyDocs/blob/master/Multiprojector_instruction_manual/applying_settings.ogv)
 * [Addendum](https://github.com/pranavkantgaur/MyDocs/blob/master/Multiprojector_instruction_manual/instruction_manual.pdf)
