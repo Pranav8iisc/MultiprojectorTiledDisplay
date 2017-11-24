@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
 {
 	QApplication a(argc, argv);
 	gui_form w;
-	w.setWindowTitle("Camera Calibration of Projector Based Tiled Display");
+	w.setWindowTitle("Multiprojector tiled display calibration tool");
 	//w.show();
 	
 	w.showMaximized();
