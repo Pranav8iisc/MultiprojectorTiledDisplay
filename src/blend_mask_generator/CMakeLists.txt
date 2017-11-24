@@ -1,0 +1,3 @@
+add_executable (blend_mask_generator blend_mask_generator.cpp)
+
+target_link_libraries (blend_mask_generator opencv_highgui opencv_core)
