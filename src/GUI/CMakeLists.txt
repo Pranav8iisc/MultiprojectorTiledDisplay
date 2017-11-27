@@ -9,7 +9,7 @@ set (MOC_HEADERS gui_form.h)
 
 set (UIS gui_form.ui)
 
-find_package (QT4 REQUIRED)
+find_package (Qt4 REQUIRED)
 include (${QT_USE_FILE})
 add_definitions(${QT_DEFINITIONS})
 include_directories (${CMAKE_BINARY_DIR} /usr/include/qt4 /usr/include/qt4/QtGui)
