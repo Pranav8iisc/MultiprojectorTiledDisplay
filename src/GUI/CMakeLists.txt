@@ -11,8 +11,10 @@ find_package (Qt4 REQUIRED)
 include (${QT_USE_FILE})
 add_definitions(${QT_DEFINITIONS})
 include_directories (${CMAKE_BINARY_DIR})
+include_directories (${PROJECT_BINARY_DIR})
 
 QT4_WRAP_UI (UI_HEADERS ${UIS})
+
 QT4_WRAP_CPP(MOC_SRC ${MOC_HEADERS})
 
 add_executable (multiproj_calib_GUI ${SOURCES} ${MOC_SRC} ${UI_HEADERS})

@@ -1,8 +1,8 @@
 <UI version="4.0" >
- <class>test1Class</class>
- <widget class="QMainWindow" name="test1Class" >
+ <class>gui_formClass</class>
+ <widget class="QMainWindow" name="gui_formClass" >
   <property name="objectName" >
-   <string notr="true">test1Class</string>
+   <string notr="true">gui_formClass</string>
   </property>
   <property name="geometry" >
    <rect>

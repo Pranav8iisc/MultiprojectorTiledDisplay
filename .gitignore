@@ -1,1 +1,5 @@
 build/*
+src/GUI/gui_form.o
+src/GUI/main.o
+src/GUI/moc_*
+src/GUI/ui_*
