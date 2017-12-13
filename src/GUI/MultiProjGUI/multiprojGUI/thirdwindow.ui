@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>40</y>
+      <width>411</width>
+      <height>231</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>10</y>
+      <width>121</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Live camera view</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="horizontalSlider">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>310</y>
+      <width>381</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>290</y>
+      <width>151</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Adjust shutter speed</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>370</y>
+      <width>111</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Project pattern</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>370</y>
+      <width>111</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Detect features</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>450</y>
+      <width>181</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Calibrate</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_4">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>450</y>
+      <width>161</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Generate Blend masks</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuCompute_camera_projector_homographies">
+    <property name="title">
+     <string>Compute camera-projector homographies</string>
+    </property>
+   </widget>
+   <addaction name="menuCompute_camera_projector_homographies"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

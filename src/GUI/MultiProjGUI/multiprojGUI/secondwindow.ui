@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>cshomoWindow</class>
+ <widget class="QMainWindow" name="cshomoWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>60</y>
+      <width>531</width>
+      <height>271</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>40</y>
+      <width>121</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Camera live view</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="horizontalSlider">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>370</y>
+      <width>311</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>350</y>
+      <width>201</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Adjust Camera Shutter Speed</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>430</y>
+      <width>99</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Capture</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>430</y>
+      <width>99</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Next</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuCompute_camera_screen_homography">
+    <property name="title">
+     <string>Compute camera-screen homography</string>
+    </property>
+   </widget>
+   <addaction name="menuCompute_camera_screen_homography"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
