@@ -2008,11 +2008,13 @@ int main()
 
         generate_chromium_configuration(); // optional
 
-/*	configure_nvidia_mosaic();	
+        transform_tiles_to_xorg_convention();
 
-	configure_nvidia_warp();
-*/
-    return 0;
+        read_tile_display_config();
+    
+        apply_nvidia_api_warp_blend();
+
+        return 0;
 
 }
 
